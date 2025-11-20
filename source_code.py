@@ -1,4 +1,3 @@
-# Python code
 # Remove comment from next line if you're not using a deticated editor to modify the code
 # from microbit import *
 
@@ -29,7 +28,6 @@ def on_pin0_rock():
     choice = 1
     game_state = 3
 input.on_pin_pressed(TouchPin.P0, on_pin0_rock)
-input.on_button_pressed(Button.B, on_pin0_rock)
 
 def on_pin1_paper():
   global game_state
@@ -128,8 +126,6 @@ def game_update():
       """)
     basic.pause(1000)
     
-    control.reset()
+    game_state = 0
     
 basic.forever(game_update)
-
-#brute force
